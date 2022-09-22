@@ -1,0 +1,121 @@
+{
+    "name":"Patrick Valera",
+    "summary":"I am a computer science student and a self-taught web developer. I aim to deepen my understanding of various technologies and build exceptional products.",
+    "skills":["JavaScript","React","NodeJS","MonogoDB","Redux"],
+    "socials":[{
+        "site":"github",
+        "link":"https://github.com/PatrickValera"
+        },{
+        "site":"linkedin",
+        "link":"https://www.linkedin.com/in/patrick-valera-285225223/"
+        },{
+        "site":"instagram",
+        "link":"https://www.instagram.com/patrkvlra/"
+        }],
+    "projects":[{
+        "id":3,
+        "title":"Artifox",
+        "description":"A Fullstack Online Store. Reverse engineered a pre-existing shopify store. Styling done with SASS and CSS modules",
+        "stack":["React","NodeJS","SASS","Redux"],
+        "link":"http://artifoxclone.herokuapp.com/",
+        "date":"2021"
+    },{
+        "id":2,
+        "title":"Candelebra",
+        "description":"A real-time mock stock trading platform. Utilizes Rechart for graphing stock prices. Allows user to view real time stock prices and place trade orders.",
+        "stack":["React","NodeJS","Socket IO","Redux"],
+        "link":"http://candelebra.herokuapp.com/",
+        "date":"2022"
+    },{
+        "id":14,
+        "title":"Study Cafe",
+        "description":"Live radio of curated lofi playlist. Additional timer and todo list.",
+        "stack":["React","Next JS","Tailwind","YT API","Sockets"],
+        "link":"https://24-lofi-study.vercel.app/",
+        "data":"2022"
+    },{
+        "id":1,
+        "title":"Groovemade",
+        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control.Features a sleek and modern design.",
+        "stack":["React","MongoDB","Material UI","Redux"],
+        "link":"https://groovemade.herokuapp.com/",
+        "date":"2022"
+    },{
+        "id":4,
+        "title":"ChatterCord",
+        "description":"A realtime messaging web app utilizing Socket IO. Keeps track and stores user messages into a database.",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"https://chattercord.herokuapp.com/",
+        "date":"2021"
+    },{
+        "id":6,
+        "title":"Spacetagram",
+        "description":"An image gallery that fetches Nasa's image of the day from 1980 to present day. Features an image viewer which can be controlled by the user.",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"http://spacetagram-pat.herokuapp.com/",
+        "date":"2021"
+    },{
+        "id":7,
+        "title":"Studi fi",
+        "description":"Video player for a curated lofi/study playlist. Makes use of youtube's iframe API",
+        "stack":["React","NextJS","CSS","MaterialUI"],
+        "link":"https://studifi.vercel.app/",
+        "date":"2021"
+    },{
+        "id":5,
+        "title":"Fun with AI",
+        "description":"Have an AI respond to prompts. Requests are processed by OpenAI's gtp-3 AI model",
+        "stack":["React","CSS/SASS","Next JS","API"],
+        "link":"https://22-shopify-intern-challenge.vercel.app/",
+        "date":"2022"
+    },{
+        "id":8,
+        "title":"Portfolio V1",
+        "description":"First portfolio page built with material ui components and deployed on heroku.",
+        "stack":["React"],
+        "link":"https://www.patrickvalera.com/",
+        "date":"2021"
+    },{
+        "id":9,
+        "title":"Portfolio V2",
+        "description":"Second revision of my portfolio built with material ui and deployed on vercel.",
+        "stack":["React"],
+        "link":"https://portfoliopv0715.vercel.app/",
+        "date":"2022"
+    },{
+        "id":10,
+        "title":"Notes",
+        "description":"Notes app made with Vue and Firebase",
+        "stack":["VueJS"],
+        "link":"https://vue-todo-704a7.web.app/",
+        "date":"2022"
+    },{
+        "id":11,
+        "title":"Recipe Scraper",
+        "description":"Web Scraper using python",
+        "stack":["Python, BeautifulSoup"],
+        "link":"https://portfoliopv0715.vercel.app/",
+        "date":"2022"
+    },{
+        "id":13,
+        "title":"Recipe Finder",
+        "description":"Connects to a third party API to search for food recipes based on the user's input",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"https://recipefinderpatrick.herokuapp.com/",
+        "date":"2021"
+    },{
+        "id":12,
+        "title":"Twitter Clone",
+        "description":"A Twitter Clone",
+        "stack":["React"],
+        "link":"https://portfoliopv0715.vercel.app/",
+        "date":"2022"
+    },{
+        "id":14,
+        "title":"Study Cafe",
+        "description":"Live radio of curated lofi playlist. Additional timer and todo list.",
+        "stack":["React","Next JS","Tailwind","YT API","Sockets"],
+        "link":"https://24-lofi-study.vercel.app/",
+        "data":"2022"
+    }]
+}

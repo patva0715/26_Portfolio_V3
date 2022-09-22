@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -15,7 +18,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +26,72 @@ a {
     color: white;
     background: black;
   }
+} */
+main::before{
+  top:-10rem;
+  left:-10rem;
+  right:-10rem;
+  bottom: -10rem;
+  z-index: 10;
+  content: '';
+  position: fixed;
+  background: url(../public/noise.png);
+  background-position-x: 50%;
+  background-position-y: center;
+  pointer-events: none;
+  animation:noise 1s steps(2) infinite;
+  border-width: 0px;
+  border-color:green;
+  opacity: .50;
+}
+@media only screen and (max-width: 600px) {
+  main::before{
+    /* opacity: .3!important; */
+    display: none;
+  }
+}
+@keyframes noise {
+	0% {
+		transform: translate3d(0, 9rem, 0)
+	}
+
+	10% {
+		transform: translate3d(-1rem, -4rem, 0)
+	}
+
+	20% {
+		transform: translate3d(-8rem, 2rem, 0)
+	}
+
+	30% {
+		transform: translate3d(9rem, -9rem, 0)
+	}
+
+	40% {
+		transform: translate3d(-2rem, 7rem, 0)
+	}
+
+	50% {
+		transform: translate3d(-9rem, -4rem, 0)
+	}
+
+	60% {
+		transform: translate3d(2rem, 6rem, 0)
+	}
+
+	70% {
+		transform: translate3d(7rem, -8rem, 0)
+	}
+
+	80% {
+		transform: translate3d(-9rem, 1rem, 0)
+	}
+
+	90% {
+		transform: translate3d(6rem, -5rem, 0)
+	}
+
+	to {
+		transform: translate3d(-7rem, 0, 0)
+	}
 }
