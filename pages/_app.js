@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }) {
     enter: { opacity: 1 },
     leave: { opacity: .99 },
     delay: 0,
-    config: { duration: 500 },
+    config: { duration: 250 },
     exitBeforeEnter: true
   })
   return (
-    <div>
+    <>
       <Layout>
         {transition((style, loc) => (
           <a.div style={style}>
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
           </a.div>
         ))}
       </Layout>
-    </div>
+    </>
   )
 }
 

@@ -39,10 +39,10 @@ main::before{
   background-position-x: 50%;
   background-position-y: center;
   pointer-events: none;
-  animation:noise 1s steps(2) infinite;
+  animation:noise 500ms steps(2) infinite;
   border-width: 0px;
   border-color:green;
-  opacity: .50;
+  opacity: 1;
 }
 @media only screen and (max-width: 600px) {
   main::before{

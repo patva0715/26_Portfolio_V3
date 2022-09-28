@@ -1,11 +1,25 @@
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useMemo } from 'react'
+import Animated from '../shared/Animated'
 
 const Logo = () => {
+    const { asPath: location } = useRouter()
+    const onPageActive = useMemo(() => {
+        return location !== '/'
+    }, [location])
     return (
-        <Link href='/'>
-            <div className='fixed top-1 left-1'>Patrick V</div>
-        </Link>
+        <div className='fixed top-1 left-1 cursor-pointer'>
+            <Animated show={onPageActive} fromSide={false}>
+                <Link href='/'>
+                    <h1>Patrick V</h1>
+                </Link>
+            </Animated>
+
+        </div>
+
+
+
     )
 }
 
