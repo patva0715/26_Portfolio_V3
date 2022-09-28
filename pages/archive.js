@@ -30,18 +30,19 @@ const Archive = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='pt-[5rem] px-8 lg:pt-[20vh] h-full '>
-        <div className='hidden lg:block'>
+        <div className='hidden lg:block my-[1vw]'>
           <Animated show={onActive}>
-            <h2 className='md:text-lg font-[300] '>Archive</h2>
+            <h2 className='text-[2vw] font-[300] '>Archive</h2>
           </Animated>
         </div>
         <div className='py-3'>
           <Animated show={onActive}>
-            <div className='flex text-xs font-normal'>
+            <div className='flex font-normal text-[2.3vw] md:text-[1.8vw] lg:text-[14px]'>
               <Text className='flex-0 basis-[17%] pl-2'>ID</Text>
               <Text className='flex-1'>TITLE</Text>
               <Text className='flex-1 hidden md:block'>TECH</Text>
               <Text className='flex-1 hidden md:block'>CATEGORY</Text>
+              <Text className='flex-0 hidden md:block'>LINK</Text>
             </div>
           </Animated>
         </div>
@@ -52,7 +53,7 @@ const Archive = () => {
             <>
               <a.div className='h-[1px] bg-gray dark:bg-amber opacity-40' style={{ width }}></a.div>
               {/* DIVIDER ROW */}
-              <div key={index} ref={ref} className='cursor-pointer py-[2.5vw] lg:py-max2 font-[200] text-[2.3vw] md:text-[1.8vw] lg:text-[17px]'>
+              <div key={index} ref={ref} className='cursor-pointer py-[2.5vw] md:py-[2vw] lg:py-[19px] font-[300] text-[2.3vw] md:text-[1.8vw] lg:text-[14px]'>
                 <Animated show={onActive}>
                   <div className='flex flex-row w-full items-center ' >
                     <h5 className='flex-0 basis-[17%] pl-2 '>
@@ -67,7 +68,7 @@ const Archive = () => {
                     <h5 className='flex-1 hidden md:block'>
                       E-COMMERCE
                     </h5>
-                    <span className='text-md lg:text-[25px]'>
+                    <span className='text-md lg:text-[19px]'>
                       <FiArrowUpRight />
                     </span>
                   </div>

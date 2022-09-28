@@ -19,7 +19,7 @@ module.exports = {
         'xs': '1.2vw',
         'sm': '3.3vw',
         'md': '16px',
-        'max': '17px',
+        'max': '18px',
       },
       padding: {
         'xs': '1.1vw',
