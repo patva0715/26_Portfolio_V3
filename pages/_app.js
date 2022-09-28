@@ -20,18 +20,18 @@ function MyApp({ Component, pageProps }) {
     <>
       <Layout>
         {transition((style, loc) => (
-          <a.div style={style}>
+          <a.div style={{...style,height:'100%'}}>
             {loc === '/' ?
-              <a.div style={style}>
+              <a.div style={{...style,height:'100%'}}>
                 <Home />
               </a.div>
               :
               loc === '/about' ?
-                <a.div style={style}>
+                <a.div style={{...style,height:'100%'}}>
                   <About />
                 </a.div>
                 :
-                <a.div style={style}>
+                <a.div style={{...style,height:'100%'}}>
                   <Archive />
                 </a.div>
             }

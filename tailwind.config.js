@@ -17,7 +17,7 @@ module.exports = {
     extend: {
       lineHeight: {
         'xs': '1.2vw',
-        'sm': '3.2vw',
+        'sm': '3.3vw',
         'md': '16px',
         'max': '17px',
       },
@@ -35,6 +35,7 @@ module.exports = {
         'gray': 'rgb(55,55,60)',
 
         'dark': 'rgb(12,12,12)',
+        // 'dark': 'rgb(55,55,55)',
         'light': 'rgb(233,232,235)'
       },
     },

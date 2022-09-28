@@ -10,7 +10,7 @@ const Animated = ({ children, show, className,fromSide }) => {
         enter: { transform: 'translate3d(0%,0%,0)' },
         leave: { transform: fromSide?'translate3d(100%,0%,0)':'translate3d(0%,-100%,0)' },
         delay: 0,
-        config: {...config.molasses,tension:400,friction:100}
+        config: {...config.molasses,tension:310,friction:65}
     })
     useEffect(() => {
         if (height) setObjHeight(height)

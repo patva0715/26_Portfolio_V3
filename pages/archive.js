@@ -29,7 +29,7 @@ const Archive = () => {
         <meta name="description" content="Project archive for Patrick's portfolio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='pt-4 lg:pt-[20vh] h-full '>
+      <div className='pt-[5rem] px-8 lg:pt-[20vh] h-full '>
         <div className='hidden lg:block'>
           <Animated show={onActive}>
             <h2 className='md:text-lg font-[300] '>Archive</h2>
@@ -52,22 +52,22 @@ const Archive = () => {
             <>
               <a.div className='h-[1px] bg-gray dark:bg-amber opacity-40' style={{ width }}></a.div>
               {/* DIVIDER ROW */}
-              <div key={index} ref={ref} className='cursor-pointer py-md lg:py-max2'>
+              <div key={index} ref={ref} className='cursor-pointer py-[2.5vw] lg:py-max2 font-[200] text-[2.3vw] md:text-[1.8vw] lg:text-[17px]'>
                 <Animated show={onActive}>
                   <div className='flex flex-row w-full items-center ' >
-                    <Text className='flex-0 basis-[17%] pl-2 '>
+                    <h5 className='flex-0 basis-[17%] pl-2 '>
                       {index}
-                    </Text>
-                    <Text className='flex-1 '>
+                    </h5>
+                    <h5 className='flex-1 '>
                       {title.toUpperCase()}
-                    </Text>
-                    <Text className='flex-1 hidden md:block'>
+                    </h5>
+                    <h5 className='flex-1 hidden md:block'>
                       {`${stack[0].toUpperCase()}, ${stack[1] || ''.toUpperCase()}`}
-                    </Text>
-                    <Text className='flex-1 hidden md:block'>
+                    </h5>
+                    <h5 className='flex-1 hidden md:block'>
                       E-COMMERCE
-                    </Text>
-                    <span className='text-xs lg:text-[18px]'>
+                    </h5>
+                    <span className='text-md lg:text-[25px]'>
                       <FiArrowUpRight />
                     </span>
                   </div>

@@ -16,7 +16,7 @@ const Divider = ({ show, delay }) => {
     })
     return (
         <div ref={ref}>
-            <a.div className='my-3 h-[1px] duration-200 bg-gray dark:bg-amber bg-opacity-40 dark:bg-opacity-40' style={{ width }} />
+            <a.div className='my-2 h-[1px] duration-200 bg-gray dark:bg-amber bg-opacity-40 dark:bg-opacity-40' style={{ width }} />
         </div>
     )
 }
@@ -42,7 +42,7 @@ const About = () => {
                 <meta name="description" content="About page for Patrick Valera" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className='font-thin py-[10vh]'>
+            <div className='font-thin border-0 pt-10 px-9 h-full'>
                 {/* ABOUT DIVIDER */}
                 <Header show={onPageActive} title='ABOUT ME' />
                 <div>

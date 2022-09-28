@@ -9,14 +9,14 @@ const Logo = () => {
         return location !== '/'
     }, [location])
     return (
-        <div className='fixed top-1 left-1 cursor-pointer'>
+        <div className='fixed top-7 right-8 cursor-pointer text-md'>
             <Animated show={onPageActive} fromSide={false}>
                 <Link href='/'>
-                    <h1>Patrick V</h1>
+                    <h1 className='text-[1rem]'>PATRICK V</h1>
                 </Link>
             </Animated>
-
         </div>
+        
 
 
 

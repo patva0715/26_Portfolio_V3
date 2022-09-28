@@ -46,8 +46,8 @@ main::before{
 }
 @media only screen and (max-width: 600px) {
   main::before{
-    /* opacity: .3!important; */
-    display: none;
+    opacity: .9!important;
+    /* display: none; */
   }
 }
 @keyframes noise {
