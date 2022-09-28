@@ -93,7 +93,7 @@ const About = () => {
                         </li>
                         <li>
                             <Animated show={onPageActive}>
-                                <Text>McDonald's - Cook</Text>
+                                <Text>McDonalds - Cook</Text>
                             </Animated>
                         </li>
                     </ul>

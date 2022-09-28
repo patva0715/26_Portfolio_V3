@@ -21,8 +21,8 @@ export default function Home() {
       </Head>
 
       <div className='text-[25vw] md:text-[20vw] lg:text-[12vw] flex font-[500] '>
-        {heading.map(letter => (
-          <Animated fromSide={true} show={onPageActive}>
+        {heading.map((letter, indx) => (
+          <Animated key={indx} fromSide={true} show={onPageActive}>
             <h1>{letter}</h1>
           </Animated>
         ))}
