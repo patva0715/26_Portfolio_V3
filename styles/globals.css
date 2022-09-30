@@ -42,7 +42,8 @@ main::before{
   animation:noise 500ms steps(2) infinite;
   border-width: 0px;
   border-color:green;
-  opacity: 1;
+  opacity: .9;
+  display: none;
 }
 @media only screen and (max-width: 600px) {
   main::before{

@@ -23,7 +23,7 @@ const Divider = ({ show, delay }) => {
 const Header = ({ show: onPageActive, title, className, delay }) => {
     return (
         <>
-            <Animated className='pt-8' show={onPageActive}>
+            <Animated className={'pt-8 '+className} show={onPageActive}>
                 <Text className='font-[400] text-orange-600'>{title}</Text>
             </Animated>
             <Divider show={onPageActive} delay={delay || 0} />
@@ -42,9 +42,9 @@ const About = () => {
                 <meta name="description" content="About page for Patrick Valera" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className='font-thin border-0 pt-10 px-9 h-full'>
+            <div className='font-thin border-0 pt-vw px-vw h-full'>
                 {/* ABOUT DIVIDER */}
-                <Header show={onPageActive} title='ABOUT ME' />
+                <Header show={onPageActive} className='pt-12' title='ABOUT ME' />
                 <div>
                     <Animated show={onPageActive}>
                         <Text>Full stack developer proficient in frontend technologies</Text>

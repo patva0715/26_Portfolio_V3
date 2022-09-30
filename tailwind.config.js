@@ -26,7 +26,10 @@ module.exports = {
         'sm': '1.8vw',
         'md': '2.5vw',
         'max': '15.6px',
-        'max2': '30px'
+        'max2': '30px',
+      },
+      spacing:{
+        'vw':'6.5vw'
       },
       colors: {
         'white': 'rgb(236,227,180)',

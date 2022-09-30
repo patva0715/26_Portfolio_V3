@@ -8,6 +8,9 @@ const Logo = () => {
     const onPageActive = useMemo(() => {
         return location !== '/'
     }, [location])
+    return <Link href='/'>
+        <h1 className='text-orange-600'>PV_</h1>
+    </Link>
     return (
         <div className='fixed z-10 top-7 right-8 cursor-pointer text-md'>
             <Animated show={onPageActive} fromSide={false}>
@@ -16,7 +19,7 @@ const Logo = () => {
                 </Link>
             </Animated>
         </div>
-        
+
 
 
 
