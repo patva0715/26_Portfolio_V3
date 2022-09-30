@@ -1,43 +1,47 @@
 import { useRouter } from 'next/router'
-import { useTransition, a } from 'react-spring'
+import { Transition, useTransition, a } from 'react-spring'
 import Layout from '../src/components/layout'
 import '../styles/globals.css'
 import About from './about'
 import Archive from './archive'
 import Home from './index'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const { asPath: location } = useRouter()
   const transition = useTransition(location, {
-    from: { opacity: 1 },
-    enter: { opacity: 1 },
-    leave: { opacity: .99 },
+
     delay: 0,
     config: { duration: 250 },
     exitBeforeEnter: true
+
   })
+  const items = [
+    {
+      id: router.route,
+      Component,
+      pageProps
+    }
+  ];
   return (
     <>
       <Layout>
-        {transition((style, loc) => (
-          <a.div style={{...style,height:'100%'}}>
-            {loc === '/' ?
-              <a.div style={{...style,height:'100%'}}>
-                <Home />
-              </a.div>
-              :
-              loc === '/about' ?
-                <a.div style={{...style,height:'100%'}}>
-                  <About />
-                </a.div>
-                :
-                <a.div style={{...style,height:'100%'}}>
-                  <Archive />
-                </a.div>
-            }
-            {/* <Component  {...pageProps} /> */}
-          </a.div>
-        ))}
+        <Transition
+          items={items}
+          keys={item => item.id}
+          initial={{ opacity: 0 }}
+          from={{ opacity: 1 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: .8 }}
+          exitBeforeEnter={true}
+          config = {{duration:200}}
+        >
+          {(styles, { pageProps, Component }) => (
+            <a.div style={{ ...styles, height: '100%' }}>
+              <Component {...pageProps} />
+            </a.div>
+          )}
+        </Transition>
+
       </Layout>
     </>
   )
