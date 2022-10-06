@@ -9,13 +9,13 @@ const Logo = () => {
         return location !== '/'
     }, [location])
     return <Link href='/'>
-        <h1 className='text-orange-600'>PV_</h1>
+        <h1 className='cursor-pointer hover:text-orange-600'>PV_</h1>
     </Link>
     return (
         <div className='fixed z-10 top-7 right-8 cursor-pointer text-md'>
             <Animated show={onPageActive} fromSide={false}>
                 <Link href='/'>
-                    <h1 className='text-[1rem] text-orange-600'>PV_</h1>
+                    <h1 className='text-[1rem] hover:text-orange-600'>PV_</h1>
                 </Link>
             </Animated>
         </div>

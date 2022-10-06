@@ -25,7 +25,7 @@ const Animated = ({ children, show, className, fromSide, molasses, delay }) => {
             <div className='overflow-hidden border-0 border-red-500' style={{ height: `${objHeight}px` }}>
                 {transition((style, i) => (
                     <>
-                        {i ? <a.div ref={ref} style={style} className='relative'>{children}</a.div> :
+                        {i ? <div ref={ref} style={style} className='relative'>{children}</div> :
                             <></>}
                     </>
                 ))}
