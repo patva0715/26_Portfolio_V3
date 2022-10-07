@@ -37,12 +37,12 @@ const About = () => {
     }, [location])
     return (
         <>
-            <div className='font-thin border-2 border-red-500 pt-vw px-vw h-full overflow-scroll'>
+            <div className='font-thin border-0 border-red-500 pt-vw px-vw h-full overflow-scroll'>
                 {/* DIVIDER */}
                 <div className='flex flex-wrap'>
                     <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Summary
 
                             </h2>
@@ -59,7 +59,7 @@ const About = () => {
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Education
                             </h2>
                         </Animated>
@@ -84,7 +84,7 @@ const About = () => {
                 <div className='flex flex-wrap'>
                     <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Work History
                             </h2>
                         </Animated>
@@ -100,7 +100,7 @@ const About = () => {
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Competitions
                             </h2>
                         </Animated>
@@ -119,13 +119,18 @@ const About = () => {
                                 {"Hack4Pan '22 - Top 20"}
                             </Text>
                         </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>
+                                {"Appwrite Hackathon '22 "}
+                            </Text>
+                        </Animated>
                     </article>
                 </div>
                 {/* DIVIDER */}
                 {/* <div className='flex flex-wrap'>
                     <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Summary
 
                             </h2>
@@ -142,7 +147,7 @@ const About = () => {
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[2.3vw] font-normal'>
+                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
                                 Education
                             </h2>
                         </Animated>
