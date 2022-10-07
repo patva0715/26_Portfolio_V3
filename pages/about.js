@@ -54,7 +54,7 @@ const About = () => {
                             <Text>but also skilled in server develpment and cloud server deployment.</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>I build solutions to connect user needs to a client's businesses model.  </Text>
+                            <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text>
                         </Animated>
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
@@ -65,17 +65,17 @@ const About = () => {
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
-                                Associate's Degree in Mathematics
+                                Associate Degree in Mathematics
                             </Text>
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
-                                Associate's Degree in Social Studies
+                                Associate Degree in Social Studies
                             </Text>
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
-                                Bachelor's of Science in Computer Science
+                                Bachelor of Science in Computer Science
                             </Text>
                         </Animated>
                     </article>
