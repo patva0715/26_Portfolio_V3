@@ -9,7 +9,6 @@ import Home from './index'
 function MyApp({ Component, pageProps, router }) {
   const { asPath: location } = useRouter()
   const transition = useTransition(location, {
-
     delay: 0,
     config: { duration: 250 },
     exitBeforeEnter: true

@@ -7,7 +7,7 @@ import { MdNightsStay } from 'react-icons/md'
 
 const Navigation = () => {
   const changeTheme = () => {
-    const element = document.getElementById('__next')
+    const element = document.getElementById('main')
     let cur = element.classList.value
     if (cur === 'dark') element.classList.value = 'light'
     else element.classList.value = 'dark'
@@ -24,9 +24,9 @@ const Navigation = () => {
         <NavTab href='/about' title='BIO' />
         <NavTab href='/archive' title='ARCHIVE' />
       </div>
-      <div className='flex flex-row fixed top-vw right-vw gap-3 font-[400] text-md'>
+      <div className='flex flex-row fixed top-vw right-vw gap-3 font-[400] text-md z-50'>
         <Animated show={onPageActive}>
-          <Link href='/about' className='opacity-0'>CONTACT</Link>
+          <Link href='/Resume.pdf' className='opacity-0'>RESUME</Link>
         </Animated>
         <button onClick={changeTheme}>
           <MdNightsStay size='20px' />
