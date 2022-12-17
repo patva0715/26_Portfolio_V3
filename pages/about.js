@@ -48,13 +48,20 @@ const About = () => {
                             </h2>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>I am a fullstack developer proficient in frontend technologies</Text>
+                            {/* <Text>I am a fullstack developer proficient in frontend technologies</Text> */}
+                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing.</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>but also skilled in server develpment and cloud server deployment.</Text>
+                            {/* <Text>but also skilled in server develpment and cloud server deployment.</Text> */}
+                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text>
+                            {/* <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text> */}
+                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            {/* <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text> */}
+                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
                         </Animated>
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
@@ -95,7 +102,7 @@ const About = () => {
                             <Text>Amazon - Warehouse Inventory Control Associate 3yr</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>McDonalds - Senior Cook 1yr</Text>
+                            <Text>McDonalds - Cook 1yr</Text>
                         </Animated>
                     </article>
                     <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>

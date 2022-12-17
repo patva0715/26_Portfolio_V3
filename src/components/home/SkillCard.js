@@ -11,7 +11,7 @@ const SkillCard = ({ title, description, stackList }) => {
             </div>
             <div className='flex-1 flex flex-wrap basis-[35%]'>
                 {stackList.map((tech, index) => (
-                    <Container tech={tech}/>
+                    <Container key={index} tech={tech}/>
                 ))}
             </div>
         </div>

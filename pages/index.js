@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <div className='h-full border-0 pointer-events-none relative flex items-center px-vw justify-start md:justify-end'>
 
-        <div className='text-[20vw] lg:text-[11vw] mt-[30vh] lg:mt-0 flex font-bold text-orange-500 opacity-90'>
+        <div className='text-[20vw] lg:text-[11vw] mt-[30vh] lg:mt-0 flex font-bold text-orange-black dark:text-orange-500 opacity-90'>
           {heading.map((letter, indx) => (
             <Animated key={indx} fromSide={true} delay={0} show={onPageActive} molasses>
               <h2 style={{ fontWeight: 500}}>{`${letter}`}</h2>
@@ -48,7 +48,7 @@ export default function Home() {
           </Animated>
         </div>
 
-        <div className='text-orange-200 opacity-60 absolute left-vw md:left-[unset] right-[unset] md:right-vw bottom-vw text-[3.8vw] md:text-[2.5vw] lg:text-[25px] leading-[5.5vw] md:leading-[2.7vw] lg:leading-[32px] text-left md:text-right font-[500]'>
+        <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute right-vw md:left-[unset] left-[unset] md:right-vw bottom-vw text-[3.8vw] md:text-[2.5vw] lg:text-[25px] leading-[5.5vw] md:leading-[2.7vw] lg:leading-[32px] text-right font-[500]'>
           <Animated show={onPageActive}>
             <h3>@patrkvee is a software engineer</h3>
           </Animated>
@@ -63,7 +63,7 @@ export default function Home() {
 
       {/* DIVIDER */}
 
-      <div className='px-vw pt-vw'>
+      <div className='px-vw pt-[10vw]'>
         {/* PROJECTS HEADER DIVIDER */}
         <div>
           <Animated show={onPageActive}>
@@ -75,7 +75,7 @@ export default function Home() {
         <div className='flex mt-4 flex-wrap md:flex-nowrap'>
           <div className='flex-0 p-vw pl-0'>
             <Link href='/archive'>
-              <button className='p-4 px-[4vw] border-2 whitespace-nowrap sticky top-[10vw]'>View All Projects</button>
+              <button className='p-3 px-[3vw] border-2 whitespace-nowrap sticky top-[10vw]'>View All Projects</button>
             </Link>
           </div>
           <div id='projects' className='flex-1 basis-[1000px]'>
@@ -95,6 +95,7 @@ export default function Home() {
             />
           ))}
         </div> */}
+        <Text className='text-orange-500 py-7 bg-orange-50 font-bold'>IN DEVELOPMENT</Text>
       </div>
     </>
   )
