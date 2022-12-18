@@ -9,7 +9,7 @@ const ProjectCard = ({ proj, index }) => {
         <>
             <div className='border-[1px] w-full opacity-30'></div>
 
-            <a href="https://google.com" className='flex' style={{ flexDirection: index % 2 == 0 ? 'row' : 'row-reverse' }}
+            <a href={ proj.link}className='flex' style={{ flexDirection: index % 2 == 0 ? 'row' : 'row-reverse' }}
                 onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
 
                 <div className='border-[1px] opacity-30' />

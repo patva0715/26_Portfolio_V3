@@ -56,7 +56,7 @@ export default function Home() {
             <h3>and a full stack web developer </h3>
           </Animated>
           <Animated show={onPageActive} delay={180}>
-            <h3>based in California-US</h3>
+            <h3>based in California, US</h3>
           </Animated>
         </div>
       </div>

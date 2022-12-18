@@ -24,12 +24,14 @@ const Navigation = () => {
         <NavTab href='/about' title='BIO' />
         <NavTab href='/archive' title='ARCHIVE' />
       </div>
-      <div className='flex flex-row fixed top-vw right-vw gap-3 font-[400] text-md z-50'>
-        <Animated show={onPageActive}>
+      <div className='flex flex-row fixed top-vw right-vw gap-4 font-[400] text-md z-50'>
+        {/* <Animated show={onPageActive}>
           <Link href='/Resume.pdf' className='opacity-0'>RESUME</Link>
-        </Animated>
+        </Animated> */}
+        <Link href='/Resume.pdf' className='opacity-0'>RESUME / CV</Link>
+
         <button onClick={changeTheme}>
-          <MdNightsStay size='20px' />
+          <MdNightsStay size='22px' />
         </button>
       </div>
     </>
