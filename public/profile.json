@@ -15,7 +15,7 @@
         {
         "id":3,
         "title":"Artifox",
-        "description":"A fullstack online E-commerce store. Reverse engineered a pre-existing shopify store. Styling done with SASS and CSS modules",
+        "description":"A fullstack online E-commerce store. Reverse engineered a pre-existing shopify store. CSS & SASS",
         "stack":["React","NodeJS","SASS","Redux"],
         "link":"http://artifoxclone.herokuapp.com/",
         "date":"2021"
@@ -29,14 +29,14 @@
     },{
         "id":14,
         "title":"Study Cafe",
-        "description":"Live web radio of curated lofi playlist. Features a timer and todo list.",
+        "description":"Live web radio of curated lofi playlist. Features a timer and a todo list.",
         "stack":["React","Next JS","Tailwind","YT API","Sockets"],
         "link":"https://24-lofi-study.vercel.app/",
         "data":"2022"
     },{
         "id":1,
         "title":"Groovemade",
-        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control.Features a sleek and modern design.",
+        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control. Material UI.",
         "stack":["React","MongoDB","Material UI","Redux"],
         "link":"https://groovemade.herokuapp.com/",
         "date":"2022"
