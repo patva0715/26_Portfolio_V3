@@ -20,7 +20,7 @@ const Navigation = () => {
     <>
       <div className='flex flex-row fixed top-vw right-[unset] left-vw md:right-8 gap-[3vw] w-min font-[400] text-md z-50'>
         {/* <Logo /> */}
-        <NavTab href='/' title='PV_' />
+        <NavTab href='/' title='PV' />
         <NavTab href='/about' title='BIO' />
         <NavTab href='/archive' title='ARCHIVE' />
       </div>
@@ -28,8 +28,9 @@ const Navigation = () => {
         {/* <Animated show={onPageActive}>
           <Link href='/Resume.pdf' className='opacity-0'>RESUME</Link>
         </Animated> */}
-        <Link href='/Resume.pdf' className='opacity-0'>RESUME / CV</Link>
-
+        <Link href='/Resume.pdf' className='opacity-0'>RESUME</Link>
+        {/* <NavTab href='/Resume.pdf' title='RESUME' /> */}
+ 
         <button onClick={changeTheme}>
           <MdNightsStay size='22px' />
         </button>

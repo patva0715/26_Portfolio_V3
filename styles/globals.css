@@ -96,3 +96,25 @@ main::before{
 		transform: translate3d(-7rem, 0, 0)
 	}
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.project-card{
+  border: 1px solid rgba(100,100,100,.4);
+  border-bottom: 0;
+}
+.project-card:last-child{
+  border: 1px solid rgba(100,100,100,.4);
+}
+.project-card:nth-child(even) article{
+  border-left: 1px solid rgba(100,100,100,.4);
+}
+.project-card:nth-child(odd) article{
+  border-right: 1px solid rgba(100,100,100,.4);
+}

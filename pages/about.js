@@ -20,14 +20,11 @@ const Divider = ({ show, delay }) => {
         </div>
     )
 }
-const Header = ({ show: onPageActive, title, className, delay }) => {
+const Header = ({ title }) => {
     return (
-        <>
-            <Animated className={'pt-8 ' + className} show={onPageActive}>
-                <Text className='font-[400] text-orange-600'>{title}</Text>
-            </Animated>
-            <Divider show={onPageActive} delay={delay || 0} />
-        </>
+        <h2 className='text-lg lg:text-max3 font-bold pb-2'>
+            {title}
+        </h2>
     )
 }
 const About = () => {
@@ -39,36 +36,44 @@ const About = () => {
         <>
             <div className='font-thin border-0 border-red-500 pt-vw px-vw h-full overflow-scroll'>
                 {/* DIVIDER */}
-                <div className='flex flex-wrap'>
-                    <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
+                <div className='flex flex-wrap mb-6'>
+                    <article className='hidden lg:block flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Summary
-
-                            </h2>
+                            <Header title='Summary' />
                         </Animated>
                         <Animated show={onPageActive}>
-                            {/* <Text>I am a fullstack developer proficient in frontend technologies</Text> */}
-                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing.</Text>
+                            <Text>Highly skilled and detail-oriented software engineer with 4 years of programming experience.</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            {/* <Text>but also skilled in server develpment and cloud server deployment.</Text> */}
-                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
+                            <Text>Capable of designing, developing, and maintaining complex software systems.</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            {/* <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text> */}
-                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            {/* <Text>{"I build solutions to connect user needs to a client's businesses model."}</Text> */}
-                            <Text>Lorem ipsum dolor sit amet consectetur.</Text>
+                            <Text>Proficient in a variety of programming languages, including Python, Javascript and C++. </Text>
                         </Animated>
                     </article>
-                    <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
+                    <article className='block lg:hidden flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Education
-                            </h2>
+                            <Header title='Summary' />
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>Highly skilled and detail-oriented software engineer with 4 years of </Text>
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>programming experience.Capable of designing, developing, and </Text>
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>maintaining complex software systems. Proficient in a variety of </Text>
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>programming languages, including Python, Javascript and C++. </Text>
+                        </Animated>
+                    </article>
+                </div>
+                {/* DIVIDER */}
+                <div className='flex flex-wrap'>
+                    <article className='flex-1 mb-4'>
+                        <Animated show={onPageActive}>
+                            <Header title='Education' />
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
@@ -86,14 +91,9 @@ const About = () => {
                             </Text>
                         </Animated>
                     </article>
-                </div>
-                {/* DIVIDER */}
-                <div className='flex flex-wrap'>
-                    <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
+                    <article className='flex-1 mb-4'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Work History
-                            </h2>
+                            <Header title='Work History' />
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>Nucamp - Fullstack Developer 4mo</Text>
@@ -105,11 +105,9 @@ const About = () => {
                             <Text>McDonalds - Cook 1yr</Text>
                         </Animated>
                     </article>
-                    <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
+                    <article className='flex-1 mb-4'>
                         <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Competitions
-                            </h2>
+                            <Header title='Competitions' />
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
@@ -133,140 +131,11 @@ const About = () => {
                         </Animated>
                     </article>
                 </div>
-                {/* DIVIDER */}
-                {/* <div className='flex flex-wrap'>
-                    <article className='flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30 pl-[2vw]'>
-                        <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Summary
-
-                            </h2>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>Full stack developer proficient in frontend technologies</Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>but also skilled in server develpment and deployment.</Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>I create client-facing products.</Text>
-                        </Animated>
-                    </article>
-                    <article className='flex-1 basis-[300px] pt-[25vw] lg:pt-[17vw] pl-[2vw]'>
-                        <Animated show={onPageActive}>
-                            <h2 className='text-[4vw] md:text-[2.3vw] font-normal'>
-                                Education
-                            </h2>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>
-                                Associate's Degree in Mathematics
-                            </Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>
-                                Associate's Degree in Social Studies
-                            </Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>
-                                Bachelor's of Science in Computer Science
-                            </Text>
-                        </Animated>
-                    </article>
-                </div> */}
-            </div>
-        </>
-    )
-    return (
-        <>
-            <Head>
-                <title>About</title>
-                <meta name="description" content="About page for Patrick Valera" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div className='font-thin border-0 pt-vw px-vw h-full'>
-                {/* ABOUT DIVIDER */}
-                <Header show={onPageActive} className='pt-12' title='ABOUT ME' />
-                <div>
-                    <Animated show={onPageActive}>
-                        <Text>Full stack developer proficient in frontend technologies</Text>
-                    </Animated>
-                    <Animated show={onPageActive}>
-                        <Text>but also skilled in server develpment and deployment.</Text>
-                    </Animated>
-                    <Animated show={onPageActive}>
-                        <Text>I create client-facing products.</Text>
-                    </Animated>
-                </div>
-                {/* EDUCATION DIVIDER */}
-                <Header show={onPageActive} title='EDUCATION' delay={120} />
-                <div className='pl-2'>
-                    <ul>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>Associates of Science - Mathematics</Text>
-                            </Animated>
-                        </li>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>Associates of Science - Social Behavior</Text>
-                            </Animated>
-                        </li>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>Bachelors of Science - Computer Science</Text>
-                            </Animated>
-                        </li>
-                    </ul>
-                </div>
-                {/* EXPERIENCE DIVIDER */}
-                <Header show={onPageActive} title='EXPERIENCE' delay={190} />
-                <div className='pl-2'>
-                    <ul>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>Amazon - Warehouse Inventory Control Associate</Text>
-                            </Animated>
-                        </li>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>Nucamp - Fullstack Developer</Text>
-                            </Animated>
-                        </li>
-                        <li>
-                            <Animated show={onPageActive}>
-                                <Text>McDonalds - Cook</Text>
-                            </Animated>
-                        </li>
-                    </ul>
-                </div>
-                {/* AWARDS DIVIDER */}
-                <Header show={onPageActive} title='AWARDS' delay={220} />
-                {/* CONTACT DIVIDER */}
-                <Header show={onPageActive} title='CONTACT' delay={240} />
-                <div className='flex gap-8'>
-                    <div>
-                        <Animated show={onPageActive}>
-                            <Text>EMAIL</Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>PATRICKVALERA500@GMAIL.COM</Text>
-                        </Animated>
-                    </div>
-                    <div>
-                        <Animated show={onPageActive}>
-                            <Text>SOCIAL</Text>
-                        </Animated>
-                        <Animated show={onPageActive}>
-                            <Text>Instagram</Text>
-                        </Animated>
-                    </div>
-                </div>
 
             </div>
         </>
     )
+
 }
 
 export default About

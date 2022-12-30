@@ -9,8 +9,7 @@ const Main = ({ children }) => {
         })
     },[])
     return (
-        <main className='border-0 border-red-500 overflow-scroll' style={{height,maxHeight:height}}>
-            {/* <div className='h-[5rem]'/> */}
+        <main className='border-0 border-red-500 min-h-[100vh]'>
             {children}
         </main>
     )
