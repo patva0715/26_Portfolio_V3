@@ -34,7 +34,7 @@ const About = () => {
     }, [location])
     return (
         <>
-            <div className='font-thin border-0 border-red-500 pt-vw px-vw h-full overflow-scroll'>
+            <div className='font-thin border-0 overflow-hidden border-red-500 pt-vw px-vw h-full overflow-scroll'>
                 {/* DIVIDER */}
                 <div className='flex flex-wrap mb-6'>
                     <article className='hidden lg:block flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30'>
@@ -99,7 +99,7 @@ const About = () => {
                             <Text>Nucamp - Fullstack Developer 4mo</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>Amazon - Warehouse Inventory Control Associate 3yr</Text>
+                            <Text>Amazon - Warehouse Inventory Control 3yr</Text>
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>McDonalds - Cook 1yr</Text>
