@@ -8,7 +8,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
+    // [fontsize, lineheight]
     fontSize: {
       'sm': ['2.3vw','2.6vw'],
       'reg': ['2.8vw','3.5vw'],
@@ -41,10 +41,8 @@ module.exports = {
       },
       colors: {
         'white': 'rgb(236,227,180)',
-
         'amber': 'rgb(236,227,180)',
         'gray': 'rgb(55,55,60)',
-
         'dark': 'rgb(12,12,12)',
         // 'dark': 'rgb(55,55,55)',
         'light': 'rgb(233,232,235)'

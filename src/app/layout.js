@@ -1,5 +1,6 @@
 import Link from "next/link";
 import '../../styles/globals.css'
+import Footer from "../components/layout/foooter";
 import Navbar from "../components/layout/navbar";
 
 export default function RootLayout({
@@ -15,6 +16,7 @@ export default function RootLayout({
                     <main className='border-0 border-red-500 min-h-[100vh]'>
                         {children}
                     </main>
+                    <Footer/>
                 </div>
             </body>
         </html>

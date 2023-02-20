@@ -7,7 +7,7 @@ import Animated from '../../src/components/shared/Animated'
 import Text from '../../src/components/shared/Text'
 import profile from '../../public/profile.json'
 import Link from 'next/link'
-import ProjectCard from './ProjectCard'
+import ProjectCard from '../components/ProjectCard'
 // import SkillCard from '../src/components/home/SkillCard'
 
 const heading = 'PATRICK'.split('')
@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute bottom-space1 right-space1 text-right text-reg lg:text-max2 font-[500]'>
           <Animated show={onPageActive}>
-            <h3>@patrkvee is a software engineer</h3>
+            <h3>@patrkvee - a software engineer</h3>
           </Animated>
           <Animated show={onPageActive} delay={100}>
             <h3>and a full stack web developer </h3>
@@ -63,7 +63,7 @@ export default function Home() {
 
 
         {/* PROJECTS DIVIDER */}
-        <div className='flex mt-4 flex-wrap md:flex-nowrap'>
+        <div className='flex mt-4 flex-wrap xl:flex-nowrap'>
           <div className='flex-0 px-space1 mb-4 pl-0 '>
             <div className='sticky top-[10vw]'>
               <div className='flex flex-col items-stretch'>
@@ -83,7 +83,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <Text className='text-orange-500 py-7 bg-orange-50 font-bold'>IN DEVELOPMENT</Text>
       </div>
     </>
   )
