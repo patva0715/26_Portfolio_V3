@@ -43,7 +43,7 @@ main::before{
   border-width: 0px;
   border-color:green;
   opacity: .9;
-  /* display: none; */
+  display: none;
 }
 @media only screen and (max-width: 600px) {
   main::before{
