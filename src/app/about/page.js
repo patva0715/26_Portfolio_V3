@@ -30,9 +30,18 @@ const Header = ({ title }) => {
 const About = () => {
     const { asPath: location } = useRouter()
     const onPageActive = true
+    const router = useRouter()
+    const handleNavigate = (target) => router.push(target)
     return (
         <>
             <div className='font-thin border-0 overflow-hidden border-red-500 pt-vw px-vw h-full'>
+                <div className='fixed top-4 left-4'>
+                    <Animated show={true}>
+                        <ul className='flex gap-2'>
+                            <li><button onClick={() => handleNavigate('/')}>Back</button></li>
+                        </ul>
+                    </Animated>
+                </div>
                 {/* DIVIDER */}
                 <div className='flex flex-wrap mb-6'>
                     <article className='hidden lg:block flex-1 basis-[300px] pt-[15vw] lg:pt-[10vw] border-r-[0px] border-gray dark:border-amber border-opacity-30'>
@@ -100,7 +109,7 @@ const About = () => {
                             <Text>Amazon - Warehouse Inventory Control 3yr</Text>
                         </Animated>
                         <Animated show={onPageActive}>
-                            <Text>McDonalds - Cook 1yr</Text>
+                            <Text>McDonalds - Cook and Trainer 1yr</Text>
                         </Animated>
                     </article>
                     <article className='flex-1 mb-4'>

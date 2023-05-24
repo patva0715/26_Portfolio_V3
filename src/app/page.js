@@ -8,10 +8,106 @@ import Text from '../../src/components/shared/Text'
 import profile from '../../public/profile.json'
 import Link from 'next/link'
 import ProjectCard from '../components/ProjectCard'
+import { useTrail } from 'react-spring'
+import { useState } from 'react'
 // import SkillCard from '../src/components/home/SkillCard'
 
-const heading = 'PATRICK'.split('')
+const heading = 'XJOQYKL'.split('')
 export default function Home() {
+  const [hidden, setHidden] = useState(false);
+  const router = useRouter()
+  const handleNavigate = (target) => {
+    setHidden(true)
+    setTimeout(() => {
+
+      router.push(target)
+
+    }, 300)
+  }
+  return (
+    <>
+      {/* NAVIGATION DIVIDER */}
+      <div className='fixed top-5 left-5'>
+        <Animated show={!hidden}>
+          <ul className='flex gap-2'>
+            <li><button onClick={() => handleNavigate('/archive')}>Archive</button></li>
+            <li><button onClick={() => handleNavigate('/about')}>About</button></li>
+          </ul>
+        </Animated>
+      </div>
+      {/* HERO SECTION DIVIDER */}
+      <div className='lg:h-[100vh] h-[86vh] relative border-0 pointer-events-none flex items-center px-space1 justify-start md:justify-end'>
+
+        <div className='text-[20vw] lg:text-[11vw] mt-[30vh] lg:mt-0 flex font-bold text-orange-black dark:text-orange-500 opacity-90'>
+          {heading.map((letter, indx) => (
+            <Animated key={indx} fromSide={true} delay={0} show={!hidden} molasses>
+              <h2 style={{ fontWeight: 500 }}>{`${letter}`}</h2>
+            </Animated>
+          ))}
+        </div>
+
+        <div className='absolute left-vw  bottom-[50%] lg:bottom-space1 text-xl lg:text-max4  font-bold'>
+          <Animated show={!hidden} delay={0}>
+            <h2>Developers</h2>
+          </Animated>
+          <Animated show={!hidden} delay={100}>
+            <h2>Portfolio</h2>
+          </Animated>
+          <Animated show={!hidden} delay={180}>
+            <h2>2022</h2>
+          </Animated>
+        </div>
+
+        <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute bottom-space1 right-space1 text-right text-reg lg:text-max2 font-[500]'>
+          <Animated show={!hidden}>
+            <h3>@patrkvee</h3>
+          </Animated>
+          <Animated show={!hidden} delay={180}>
+            <h3>California, US</h3>
+          </Animated>
+          <Animated show={!hidden}>
+            <h3>Software engineer</h3>
+          </Animated>
+          <Animated show={!hidden} delay={100}>
+            <h3>Full stack web developer </h3>
+          </Animated>
+
+        </div>
+      </div>
+      {/* PROJECTS DIVIDER */}
+      <div className='px-space1 lg:px-space2 pt-[10vw]'>
+        <div className='flex mt-4 flex-wrap xl:flex-nowrap'>
+          <div className='flex-0 px-space1 mb-4 pl-0 '>
+            <div className='sticky top-[10vw]'>
+              <div className='flex flex-col items-stretch'>
+                <Animated show={!hidden}>
+                  <h2 className='text-[7vw] lg:text-[55px] font-bold'>SIDE PROJECTS</h2>
+                </Animated>
+              </div>
+              <Animated show={!hidden}>
+                <Link href='/archive'>
+                  <button className='p-3 px-[3vw] text-reg lg:text-max border-[1px] whitespace-nowrap '>View All Projects</button>
+                </Link>
+              </Animated>
+            </div>
+          </div>
+          <div id='projects' className='flex-1 basis-[1000px]'>
+            {/* DIVIDER ROW */}
+            {profile.projects.slice(0, 5).map((proj, index) => (
+              <Animated show={!hidden}>
+                <ProjectCard proj={proj} index={index} key={index} />
+              </Animated>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+
+
+function old_Home() {
   const { asPath: location } = useRouter()
   const onPageActive = true
   return (
@@ -45,7 +141,7 @@ export default function Home() {
 
         <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute bottom-space1 right-space1 text-right text-reg lg:text-max2 font-[500]'>
           <Animated show={onPageActive}>
-            <h3>@patrkvee - a software engineer</h3>
+            <h3>@patrkvee - software engineer</h3>
           </Animated>
           <Animated show={onPageActive} delay={100}>
             <h3>and a full stack web developer </h3>
