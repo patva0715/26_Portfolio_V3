@@ -15,7 +15,7 @@ const ProjectCard = ({ proj, index }) => {
                 <article className='flex-1 p-[2vw] flex flex-col'>
                     <HeaderLink show={show} title={proj.title} />
                     <p className='flex-1 text-reg lg:text-max2 mt-[3vw] opacity-60'>{proj.description}</p>
-                    <p className='flex-0 text-sm lg:text-max'>Website</p>
+                    <p className='flex-0 text-sm lg:text-max'>Full Stack</p>
                 </article>
 
 

@@ -11,8 +11,8 @@ import ProjectCard from '../components/ProjectCard'
 import { useTrail } from 'react-spring'
 import { useState } from 'react'
 // import SkillCard from '../src/components/home/SkillCard'
-
-const heading = 'XJOQYKL'.split('')
+import { MdNightsStay } from 'react-icons/md'
+const heading = 'Patrick\xa0Valera'.split('')
 export default function Home() {
   const [hidden, setHidden] = useState(false);
   const router = useRouter()
@@ -24,53 +24,72 @@ export default function Home() {
 
     }, 300)
   }
+  const changeTheme = () => {
+    const element = document.getElementById('main')
+    let cur = element.classList.value
+    if (cur === 'dark') element.classList.value = 'light'
+    else element.classList.value = 'dark'
+  }
   return (
     <>
       {/* NAVIGATION DIVIDER */}
-      <div className='fixed top-5 left-5'>
-        <Animated show={!hidden}>
-          <ul className='flex gap-2'>
+      <div className='fixed top-5 px-5 w-full z-10'>
+        <Animated show={!hidden} delay={120}>
+          <ul className='flex gap-5 w-full '>
             <li><button onClick={() => handleNavigate('/archive')}>Archive</button></li>
             <li><button onClick={() => handleNavigate('/about')}>About</button></li>
+            
+            <li className='flex grow justify-end'>
+            <button onClick={changeTheme} className='px-2'>
+                    <MdNightsStay size='22px' />
+                </button>
+              <Link href='/Resume.pdf' className='opacity-100'>Resume</Link>
+             </li>
           </ul>
         </Animated>
       </div>
       {/* HERO SECTION DIVIDER */}
-      <div className='lg:h-[100vh] h-[86vh] relative border-0 pointer-events-none flex items-center px-space1 justify-start md:justify-end'>
+      <div className='lg:h-[100vh] h-[100vh]  relative border-0 pointer-events-none flex-col flex items-center px-space1 justify-center'>
 
-        <div className='text-[20vw] lg:text-[11vw] mt-[30vh] lg:mt-0 flex font-bold text-orange-black dark:text-orange-500 opacity-90'>
+        <div className='text-[9vw] lg:text-[8.2vw] max-h-[11vw] font-normal flex text-orange-black dark:text-orange-500 opacity-90'>
           {heading.map((letter, indx) => (
-            <Animated key={indx} fromSide={true} delay={0} show={!hidden} molasses>
-              <h2 style={{ fontWeight: 500 }}>{`${letter}`}</h2>
+            <Animated key={indx} fromSide={true} delay={1000} show={!hidden} molasses>
+              <h2>{`${letter}`}</h2>
             </Animated>
           ))}
+          
         </div>
-
-        <div className='absolute left-vw  bottom-[50%] lg:bottom-space1 text-xl lg:text-max4  font-bold'>
-          <Animated show={!hidden} delay={0}>
+        <div className='text-[3vw] tracking-[.45vw] font-thin'>
+        <Animated show={!hidden} delay={950} molasses={true}>
+            <h3>Full-Stack Software Engineer</h3>
+          </Animated>
+        </div>
+  
+        <div className='absolute left-vw  bottom-[60%] lg:bottom-space1 text-reg lg:text-max3 '>
+          <Animated show={!hidden} delay={400}>
             <h2>Developers</h2>
           </Animated>
-          <Animated show={!hidden} delay={100}>
+          <Animated show={!hidden} delay={500}>
             <h2>Portfolio</h2>
           </Animated>
-          <Animated show={!hidden} delay={180}>
+          <Animated show={!hidden} delay={600}>
             <h2>2022</h2>
           </Animated>
         </div>
 
-        <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute bottom-space1 right-space1 text-right text-reg lg:text-max2 font-[500]'>
-          <Animated show={!hidden}>
+        <div className='dark:text-orange-200 text-black dark:opacity-90 opacity-70 absolute bottom-[30%] lg:bottom-space1 right-space1 text-right text-reg lg:text-max2 '>
+          {/* <Animated show={!hidden}>
             <h3>@patrkvee</h3>
-          </Animated>
-          <Animated show={!hidden} delay={180}>
+          </Animated> */}
+          <Animated show={!hidden} delay={600}>
             <h3>California, US</h3>
           </Animated>
-          <Animated show={!hidden}>
+          {/* <Animated show={!hidden}>
             <h3>Software engineer</h3>
           </Animated>
           <Animated show={!hidden} delay={100}>
             <h3>Full stack web developer </h3>
-          </Animated>
+          </Animated> */}
 
         </div>
       </div>
@@ -170,6 +189,7 @@ function old_Home() {
               <Link href='/archive'>
                 <button className='p-3 px-[3vw] text-reg lg:text-max border-[1px] whitespace-nowrap '>View All Projects</button>
               </Link>
+              
             </div>
           </div>
           <div id='projects' className='flex-1 basis-[1000px]'>

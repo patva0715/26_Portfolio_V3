@@ -128,6 +128,11 @@ const About = () => {
                         </Animated>
                         <Animated show={onPageActive}>
                             <Text>
+                                {"Harvard CS50"}
+                            </Text>
+                        </Animated>
+                        <Animated show={onPageActive}>
+                            <Text>
                                 {"Hack4Pan '22 - Top 20"}
                             </Text>
                         </Animated>

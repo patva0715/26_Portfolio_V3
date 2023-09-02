@@ -9,7 +9,6 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useRouter } from 'next/navigation'
 import Text from '../../components/shared/Text'
 
-
 const Archive = () => {
   const { asPath: location } = useRouter()
   const onActive =true
@@ -23,6 +22,10 @@ const Archive = () => {
     to: { width:  viewWidth  },
     from: { width: 0 },
   })
+  const router = useRouter()
+
+  const handleNavigate = (target) => router.push(target)
+
   return (
     <>
       <Head>
@@ -31,6 +34,13 @@ const Archive = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='pt-[5rem] px-vw lg:pt-[20vh] h-full '>
+      <div className='fixed top-4 left-4'>
+                    <Animated show={true}>
+                        <ul className='flex gap-2'>
+                            <li><button onClick={() => handleNavigate('/')}>Back</button></li>
+                        </ul>
+                    </Animated>
+                </div>
         <div className='hidden lg:block my-[1vw]'>
           <Animated show={onActive}>
             <h2 className='text-[2vw] font-[300] '>Archive</h2>

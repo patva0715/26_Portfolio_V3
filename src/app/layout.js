@@ -8,10 +8,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body id='main' className='dark'>
+            <body id='main' className=''>
 
                 <div className=' text-gray dark:text-amber bg-light dark:bg-dark duration-200 text-md md:text-xs lg:text-[18px]'>
-                    <main className='border-0 border-red-500 min-h-[100vh]'>
+                    <main className='border-0 border-red-500 min-h-[100vh] '>
                         {children}
                     </main>
                     <Footer/>
