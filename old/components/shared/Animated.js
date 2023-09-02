@@ -3,14 +3,7 @@ import { useTransition, a, easings, config } from 'react-spring'
 import useMeasure from 'react-use-measure'
 
 const conDef = { ...config.default, tension: 150 }
-const conMol = { ...config.default, tension: 80 }
-
-// const movements = {
-//     'right':{
-//         from:'translate3d(100%,0,0)',
-//         leave:'translate3d(-100%,0,0)',
-//     }
-// }
+const conMol = { ...config.molasses }
 
 const Animated = ({ children, show, className, fromSide, molasses, delay }) => {
     const [objHeight, setObjHeight] = useState(0)
@@ -18,7 +11,7 @@ const Animated = ({ children, show, className, fromSide, molasses, delay }) => {
     const transition = useTransition(show, {
         from: { transform: fromSide ? 'translate3d(-110%,0%,0)' : 'translate3d(0%,110%,0)' },
         enter: { transform: 'translate3d(0%,0%,0)' },
-        leave: { transform: fromSide ? 'translate3d(110%,0%,0)' : 'translate3d(0%,-110%,0)' },
+        leave: { transform: fromSide ? 'translate3d(100%,0%,0)' : 'translate3d(0%,-100%,0)' },
         delay: delay && show ? delay : 0,
         // config: {...config.molasses,tension:310,friction:55},
         config: molasses && show ? conMol : conDef
@@ -26,7 +19,6 @@ const Animated = ({ children, show, className, fromSide, molasses, delay }) => {
     })
     useEffect(() => {
         if (height) setObjHeight(height)
-        // console.log(movements['right'])
     }, [height])
     return (
         <div className={className}>
